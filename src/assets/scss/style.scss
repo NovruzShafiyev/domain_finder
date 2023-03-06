@@ -1,0 +1,493 @@
+//// Header and Footer scss
+
+.header {
+    & * {
+      color: black !important;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Verdana, sans-serif;
+    }
+  
+    & > .header-logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100px;
+  
+      & > a:first-child {
+        font-size: 25px;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+    }
+  
+    & > .header-signin {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      & > a:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+//////
+
+
+.footer {
+    margin: 10px 0 50px;
+  
+    & .social {
+      display: flex;
+      justify-content: space-around;
+      margin-right: 70px;
+  
+      & + div {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  
+    & .footer_language {
+      & span {
+        margin-right: 15px;
+      }
+  
+      & select {
+        padding: 5px 10px;
+        border: 2px solid lightgray;
+        border-radius: 5px;
+        outline: 0;
+      }
+    }
+  }
+
+
+
+///////// Elements
+
+.filteredDomains {
+  background-color: white !important;
+  border: 1px solid lightgray;
+  padding: 30px 0 30px 10px;
+
+  & .domainRank {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 30px;
+
+    & .domain {
+      & > div {
+        display: flex;
+        align-items: center;
+      }
+
+      & img {
+        margin-right: 10px;
+
+        & + span {
+          font-weight: bold;
+          font-size: 19px;
+        }
+      }
+
+      & a {
+        color: gray !important;
+      }
+    }
+
+    & .alexarank {
+      display: flex;
+      align-items: center;
+
+      & > div:not(:last-child) {
+        margin-right: 25px;
+      }
+
+      & .scor {
+        color: #52ab84;
+        font-weight: bold;
+
+        & + div {
+          color: gray;
+        }
+      }
+    }
+  }
+
+  & .domandescript {
+    margin-right: 30px;
+  }
+}
+
+///////
+
+
+.tags {
+  display: flex;
+  align-items: center;
+
+  & > ul {
+     display: flex;
+     flex-wrap: wrap;
+     list-style: none;
+     margin: 0 !important;
+     margin-left: -40px !important;
+
+     & > li {
+        background-color: aliceblue;
+        border-radius: 5px;
+        margin: 10px 0 0;
+
+        &:not(:last-child) {
+           margin-right: 10px;
+        }
+
+        & > a {
+           display: inline-block;
+           padding: 10px 20px;
+        }
+     }
+  }
+}
+
+
+//////////////////
+
+
+.search {
+  display: flex;
+  align-items: center;
+  border: 2px solid #52ab84;
+  border-radius: 5px;
+  background-color: white !important;
+
+  & > .select {
+     padding: 15px;
+     border-right: 2px solid #52ab84;
+  }
+
+  & > .searchbox {
+     display: flex;
+     justify-content: space-between;
+     flex-grow: 1;
+     align-self: stretch;
+
+     & > input {
+        flex-grow: 1;
+        border: 0;
+        padding-left: 20px;
+        font-size: 17px;
+
+        &:focus {
+           outline: 0;
+           caret-color: #52ab84;
+        }
+        &::selection {
+           color: white;
+           background-color: #52ab84;
+        }
+        &::placeholder {
+           font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+           font-size: 17px;
+        }
+     }
+
+     & > div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 70px;
+
+
+
+        & > .searchbtn {
+           align-self: center;
+           text-align: center;
+
+           & > i {
+              font-size: 23px;
+              color: rgb(40, 39, 39);
+           }
+        }
+     }
+  }
+}
+
+
+///////////////////////
+
+
+.greenHead {
+  & > div:first-child {
+     background-color: #52ab84 !important;
+     padding-bottom: 80px;
+
+     & * {
+        color: white !important;
+     }
+  }
+}
+
+
+//////////////////////
+
+
+.domainsearching {
+  margin-top: 150px;
+
+  & > .domain {
+     // Heading:
+     & > div:first-child {
+        text-align: center;
+        margin: 0 0 50px;
+
+        & > h2 {
+           font-size: 37px;
+        }
+        & > p {
+           font-size: 18px;
+        }
+     }
+
+     // Searching:
+     & > div:nth-child(2) {
+        & > .result {
+           display: none;
+           border: 2px solid #52ab84;
+           border-radius: 5px;
+           padding: 15px;
+           margin-top: -40px;
+
+           & > div {
+              background-color: transparent;
+           }
+
+           & > div:last-child {
+              color: #52ab84 !important;
+              text-decoration: underline;
+           }
+        }
+     }
+
+     // Top Searches:
+     & > div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0 100px;
+
+        & > b {
+           margin-right: 40px;
+        }
+     }
+  }
+}
+
+
+///////////////////////
+
+
+
+.domainDescription {
+  margin: 150px 0 80px;
+
+  & > .description {
+     & > div:first-child {
+        & > h2 {
+           font-size: 40px;
+        }
+
+        & > span {
+           font-size: 19px;
+        }
+     }
+
+     // 1-2-3
+     & > div:last-child {
+        display: flex;
+
+        & > div {
+           display: flex;
+           align-items: center;
+           font-size: 21px;
+           margin: 80px 0 0;
+
+           & > span:first-child {
+              display: inline-flex;
+              justify-content: center;
+              border-radius: 50%;
+              background-color: #52ab84;
+              color: white;
+              width: 35px;
+              height: 35px;
+              margin-right: 10px;
+           }
+        }
+
+        & > div:not(:last-child)::after {
+           content: url("../../assets/images/right_arrow.png");
+           margin-bottom: -12px;
+           margin-right: 20px;
+           margin-left: 20px;
+        }
+     }
+  }
+}
+
+
+
+//////////////////////////   Pagess
+
+
+
+// Header:
+.detailSearchBar {
+  margin-top: -155px !important;
+
+  & * {
+    background-color: #63b390;
+    color: white !important;
+    border: 0 !important;
+    caret-color: white !important;
+  }
+
+  & *::placeholder {
+    color: lightgray !important;
+  }
+}
+
+// Sections:
+.detailPage {
+  margin-top: -40px;
+
+  & .tagsBox,
+  .domainRegister,
+  .whois {
+    padding: 30px;
+    background-color: white !important;
+    border: 1px solid lightgray;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    & a {
+      text-decoration: underline;
+      color: gray !important;
+    }
+  }
+
+  & .whois {
+    & .react-tabs__tab--selected {
+      border: none;
+      border-bottom: 2px solid #63b390;
+      color: #63b390;
+      font-weight: bolder;
+    }
+
+    & .react-tabs__tab {
+      position: static;
+    }
+
+    & .tabpanelStyle > div {
+      & > div:first-child {
+        font-size: 13px;
+        color: gray !important;
+        margin: 10px 0;
+      }
+
+      & > div:last-child {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+// Similar:
+.similar {
+  margin: 40px 0;
+}
+
+
+///////////////////////////////////////////////
+
+
+.shadowbox {
+  box-shadow: 0px 55px 25px 4px #8080801f;
+  margin-top: -30px;
+}
+
+.searchPage {
+  margin: 90px 0 110px;
+
+  & *::selection {
+     color: black;
+     background-color: lightgreen;
+  }
+
+  & .filters {
+     & .multiselect {
+        & * {
+           border: none;
+           margin-bottom: 0;
+        }
+
+        & > span {
+           display: inline-block;
+           width: 85%;
+           font-weight: bold;
+           position: relative;
+           top: 30px;
+           background-color: white;
+           z-index: 99;
+        }
+
+        & .dropdown-container {
+           box-shadow: none;
+
+           & .dropdown-content {
+              z-index: 100;
+           }
+        }
+     }
+  }
+
+  & .showing {
+     & > div:first-child {
+        display: flex;
+        justify-content: space-between;
+
+        & span + div {
+           display: flex;
+
+           & > span {
+              margin-right: 10px;
+           }
+        }
+     }
+  }
+
+  & .boxes {
+     margin: 30px 0;
+  }
+}
+
+
+
+//////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
