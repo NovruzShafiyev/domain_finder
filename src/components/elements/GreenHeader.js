@@ -2,9 +2,9 @@ import React from 'react';
 import Header from '../layout/Header';
 import '../../assets/scss/style.scss';
 
-function GreenHeader() {
+const GreenHeader = () => {
    return (
-      <div className="greenHead">
+      <div className="green_header">
          <div>
             <Header />
          </div>

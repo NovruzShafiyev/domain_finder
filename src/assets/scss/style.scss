@@ -1,158 +1,157 @@
 //// Header and Footer scss
+* {
+  color: black !important;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Verdana, sans-serif;
+}
 
-.header {
-    & * {
-      color: black !important;
-      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Verdana, sans-serif;
-    }
-  
-    & > .header-logo {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      height: 100px;
-  
-      & > a:first-child {
-        font-size: 25px;
-        font-weight: bolder;
-        text-transform: uppercase;
-      }
-    }
-  
-    & > .header-signin {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      & > a:first-child {
-        margin-right: 20px;
-      }
-    }
-  }
-//////
+// .header {
+//   & * {
+//     color: black !important;
+//     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+//       "Lucida Sans Unicode", Verdana, sans-serif;
+//   }
 
+.header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
 
-.footer {
-    margin: 10px 0 50px;
-  
-    & .social {
-      display: flex;
-      justify-content: space-around;
-      margin-right: 70px;
-  
-      & + div {
-        display: flex;
-        justify-content: space-around;
-      }
-    }
-  
-    & .footer_language {
-      & span {
-        margin-right: 15px;
-      }
-  
-      & select {
-        padding: 5px 10px;
-        border: 2px solid lightgray;
-        border-radius: 5px;
-        outline: 0;
-      }
-    }
-  }
-
-
-
-///////// Elements
-
-.filteredDomains {
-  background-color: white !important;
-  border: 1px solid lightgray;
-  padding: 30px 0 30px 10px;
-
-  & .domainRank {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-right: 30px;
-
-    & .domain {
-      & > div {
-        display: flex;
-        align-items: center;
-      }
-
-      & img {
-        margin-right: 10px;
-
-        & + span {
-          font-weight: bold;
-          font-size: 19px;
-        }
-      }
-
-      & a {
-        color: gray !important;
-      }
-    }
-
-    & .alexarank {
-      display: flex;
-      align-items: center;
-
-      & > div:not(:last-child) {
-        margin-right: 25px;
-      }
-
-      & .scor {
-        color: #52ab84;
-        font-weight: bold;
-
-        & + div {
-          color: gray;
-        }
-      }
-    }
-  }
-
-  & .domandescript {
-    margin-right: 30px;
+  a:first-child {
+    font-size: 25px;
+    font-weight: bolder;
+    text-transform: uppercase;
   }
 }
 
-///////
+.header-signin {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  & > a:first-child {
+    margin-right: 20px;
+  }
+}
 
+//////  Footer
+
+.footer {
+  margin: 10px 0 50px;
+
+  & .footer_social {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 70px;
+
+    & + div {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  & .footer_language {
+    & span {
+      margin-right: 15px;
+    }
+
+    & select {
+      padding: 5px 10px;
+      border: 2px solid lightgray;
+      border-radius: 5px;
+      outline: 0;
+    }
+  }
+}
+
+//////////// Elements
+
+///////////// ResultItem
+
+.filtered-domain-list {
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 30px 0 30px 10px;
+}
+
+.filtered-domain-list .domain {
+  display: flex;
+  align-items: center;
+}
+
+.filtered-domain-list .domain img {
+  margin-right: 10px;
+}
+
+.filtered-domain-list .domain img + span {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.filtered-domain-list .domain a {
+  color: gray;
+}
+
+.filtered-domain-list .domainRank {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 30px;
+}
+
+.filtered-domain-list .domain_description {
+  margin-right: 30px;
+}
+
+.filtered-domain-list .alexarank {
+  display: flex;
+  align-items: center;
+}
+
+.filtered-domain-list .alexarank > div:not(:last-child) {
+  margin-right: 25px;
+}
+
+.filtered-domain-list .alexarank .score {
+  color: #52ab84;
+  font-weight: bold;
+}
+
+.filtered-domain-list .alexarank .score + div {
+  color: gray;
+}
+
+////////////// Tags
 
 .tags {
   display: flex;
   align-items: center;
-
-  & > ul {
-     display: flex;
-     flex-wrap: wrap;
-     list-style: none;
-     margin: 0 !important;
-     margin-left: -40px !important;
-
-     & > li {
-        background-color: aliceblue;
-        border-radius: 5px;
-        margin: 10px 0 0;
-
-        &:not(:last-child) {
-           margin-right: 10px;
-        }
-
-        & > a {
-           display: inline-block;
-           padding: 10px 20px;
-        }
-     }
-  }
 }
 
+.tags > ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  margin-left: -40px;
+}
 
-//////////////////
+.tags > ul > li {
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin: 10px 0 0;
+}
 
+.tags > ul > li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.tags > ul > li > a {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+////////////////// SearchBar
 
 .search {
   display: flex;
@@ -161,187 +160,181 @@
   border-radius: 5px;
   background-color: white !important;
 
-  & > .select {
-     padding: 15px;
-     border-right: 2px solid #52ab84;
+  > .select {
+    padding: 15px;
+    border-right: 2px solid #52ab84;
   }
 
-  & > .searchbox {
-     display: flex;
-     justify-content: space-between;
-     flex-grow: 1;
-     align-self: stretch;
+  > .searchbox {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-self: stretch;
 
-     & > input {
-        flex-grow: 1;
-        border: 0;
-        padding-left: 20px;
+    > input {
+      flex-grow: 1;
+      border: 0;
+      padding-left: 20px;
+      font-size: 17px;
+
+      &:focus {
+        outline: 0;
+        caret-color: #52ab84;
+      }
+
+      &::selection {
+        color: white;
+        background-color: #52ab84;
+      }
+
+      &::placeholder {
+        font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
         font-size: 17px;
+      }
+    }
 
-        &:focus {
-           outline: 0;
-           caret-color: #52ab84;
+    > div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 70px;
+
+      > .search_btn {
+        align-self: center;
+        text-align: center;
+
+        > i {
+          font-size: 23px;
+          color: rgb(40, 39, 39);
         }
-        &::selection {
-           color: white;
-           background-color: #52ab84;
-        }
-        &::placeholder {
-           font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-           font-size: 17px;
-        }
-     }
-
-     & > div {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 70px;
-
-
-
-        & > .searchbtn {
-           align-self: center;
-           text-align: center;
-
-           & > i {
-              font-size: 23px;
-              color: rgb(40, 39, 39);
-           }
-        }
-     }
+      }
+    }
   }
 }
 
+/////////////////////// GreenHeader
 
-///////////////////////
-
-
-.greenHead {
+.green_header {
   & > div:first-child {
-     background-color: #52ab84 !important;
-     padding-bottom: 80px;
+    background-color: #52ab84 !important;
+    padding-bottom: 80px;
 
-     & * {
-        color: white !important;
-     }
+    & * {
+      color: white !important;
+    }
   }
 }
 
+//////////////////////  DomainBuy
 
-//////////////////////
+$green: #52ab84;
 
-
-.domainsearching {
+.domainsearch {
   margin-top: 150px;
 
   & > .domain {
-     // Heading:
-     & > div:first-child {
-        text-align: center;
-        margin: 0 0 50px;
+    & > div:first-child {
+      text-align: center;
+      margin: 0 0 50px;
 
-        & > h2 {
-           font-size: 37px;
+      h2 {
+        font-size: 37px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    & > div:nth-child(2) {
+      & > .result {
+        display: none;
+        border: 2px solid $green;
+        border-radius: 5px;
+        padding: 15px;
+        margin-top: -40px;
+
+        div {
+          background-color: transparent;
         }
-        & > p {
-           font-size: 18px;
+
+        div:last-child {
+          color: $green !important;
+          text-decoration: underline;
         }
-     }
+      }
+    }
 
-     // Searching:
-     & > div:nth-child(2) {
-        & > .result {
-           display: none;
-           border: 2px solid #52ab84;
-           border-radius: 5px;
-           padding: 15px;
-           margin-top: -40px;
+    & > div:last-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0 100px;
 
-           & > div {
-              background-color: transparent;
-           }
-
-           & > div:last-child {
-              color: #52ab84 !important;
-              text-decoration: underline;
-           }
-        }
-     }
-
-     // Top Searches:
-     & > div:last-child {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 30px 0 100px;
-
-        & > b {
-           margin-right: 40px;
-        }
-     }
+      b {
+        margin-right: 40px;
+      }
+    }
   }
 }
 
+/////////////////////// DomainDescription
 
-///////////////////////
-
-
-
-.domainDescription {
+.domain-description {
   margin: 150px 0 80px;
 
   & > .description {
-     & > div:first-child {
-        & > h2 {
-           font-size: 40px;
-        }
+    & > div:first-child {
+      & > h2 {
+        font-size: 40px;
+      }
 
-        & > span {
-           font-size: 19px;
-        }
-     }
+      & > span {
+        font-size: 19px;
+      }
+    }
 
-     // 1-2-3
-     & > div:last-child {
+    & > div:last-child {
+      display: flex;
+
+      & > div {
         display: flex;
+        align-items: center;
+        font-size: 21px;
+        margin: 80px 0 0;
 
-        & > div {
-           display: flex;
-           align-items: center;
-           font-size: 21px;
-           margin: 80px 0 0;
-
-           & > span:first-child {
-              display: inline-flex;
-              justify-content: center;
-              border-radius: 50%;
-              background-color: #52ab84;
-              color: white;
-              width: 35px;
-              height: 35px;
-              margin-right: 10px;
-           }
+        & > span:first-child {
+          display: flex;
+          justify-content: center;
+          border-radius: 50%;
+          background-color: #52ab84;
+          color: white !important;
+          width: 40px;
+          height: 35px;
+          margin-right: 10px;
         }
 
-        & > div:not(:last-child)::after {
-           content: url("../../assets/images/right_arrow.png");
-           margin-bottom: -12px;
-           margin-right: 20px;
-           margin-left: 20px;
+        &::after {
+          content: "";
+          background-image: url("../../assets/images/right_arrow.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          margin: -12px 20px 0;
+          height: 15px;
+          width: 15px;
         }
-     }
+
+        &:last-child::after {
+          content: none;
+        }
+      }
+    }
   }
 }
 
+//////////////////////////  Detail Page
 
-
-//////////////////////////   Pagess
-
-
-
-// Header:
-.detailSearchBar {
+.detail-SearchBar {
   margin-top: -155px !important;
 
   & * {
@@ -356,7 +349,6 @@
   }
 }
 
-// Sections:
 .detailPage {
   margin-top: -40px;
 
@@ -407,14 +399,11 @@
   }
 }
 
-// Similar:
 .similar {
   margin: 40px 0;
 }
 
-
-///////////////////////////////////////////////
-
+////////////////////////////////////////// SearchResult
 
 .shadowbox {
   box-shadow: 0px 55px 25px 4px #8080801f;
@@ -425,69 +414,55 @@
   margin: 90px 0 110px;
 
   & *::selection {
-     color: black;
-     background-color: lightgreen;
+    color: black;
+    background-color: lightgreen;
   }
 
   & .filters {
-     & .multiselect {
-        & * {
-           border: none;
-           margin-bottom: 0;
-        }
+    & .multiselect {
+      & * {
+        border: none;
+        margin-bottom: 0;
+      }
 
-        & > span {
-           display: inline-block;
-           width: 85%;
-           font-weight: bold;
-           position: relative;
-           top: 30px;
-           background-color: white;
-           z-index: 99;
-        }
+      & > span {
+        display: inline-block;
+        width: 85%;
+        font-weight: bold;
+        position: relative;
+        top: 30px;
+        background-color: white;
+        z-index: 99;
+      }
 
-        & .dropdown-container {
-           box-shadow: none;
+      & .dropdown-container {
+        box-shadow: none;
 
-           & .dropdown-content {
-              z-index: 100;
-           }
+        & .dropdown-content {
+          z-index: 100;
         }
-     }
+      }
+    }
   }
 
   & .showing {
-     & > div:first-child {
+    & > div:first-child {
+      display: flex;
+      justify-content: space-between;
+
+      & span + div {
         display: flex;
-        justify-content: space-between;
 
-        & span + div {
-           display: flex;
-
-           & > span {
-              margin-right: 10px;
-           }
+        & > span {
+          margin-right: 10px;
         }
-     }
+      }
+    }
   }
 
-  & .boxes {
-     margin: 30px 0;
+  & .results {
+    margin: 30px 0;
   }
 }
 
-
-
 //////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-

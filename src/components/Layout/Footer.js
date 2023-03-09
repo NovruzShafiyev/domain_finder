@@ -2,9 +2,9 @@ import { Col, Row, Divider } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Images } from "../../assets/images/Image.js";
-import "../../assets/scss/style.scss"
+import "../../assets/scss/style.scss";
 
-const Footer = () =>{
+const Footer = () => {
   return (
     <Row>
       <Divider />
@@ -15,7 +15,7 @@ const Footer = () =>{
               {/* Social */}
               <Col span={20}>
                 <Row>
-                  <Col className="social" span={3}>
+                  <Col className="footer_social" span={3}>
                     <div>
                       <Link to="https://www.twitter.com/">
                         <img src={Images.Twitter} alt="" />
@@ -57,6 +57,6 @@ const Footer = () =>{
       </Col>
     </Row>
   );
-}
+};
 
 export default Footer;

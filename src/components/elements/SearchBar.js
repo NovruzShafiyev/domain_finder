@@ -28,12 +28,12 @@ const menu = (
   />
 );
 
-function SearchingBox() {
+const SearchingBox = () => {
   return (
     <div className="search">
       <div className="select">
         <Dropdown overlay={menu} trigger={["click"]}>
-          <a href="htt" onClick={(e) => e.preventDefault()}>
+          <a href=" " onClick={(e) => e.preventDefault()}>
             <Space>
               <b>Resources</b>
               <DownOutlined />
@@ -52,7 +52,7 @@ function SearchingBox() {
         />
         <div>
 
-          <a href={"/search"} className="searchbtn">
+          <a href={"/search"} className="search_btn">
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
         </div>

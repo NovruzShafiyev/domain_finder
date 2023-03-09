@@ -4,13 +4,12 @@ import { Col, Row } from 'antd';
 import '../../assets/scss/style.scss';
 import Tags from '../elements/Tags';
 
-function Domain() {
+const Domain = () => {
    return (
       <Row justify="center">
          <Col span={24}>
-            <Row justify="center" className="domainsearching">
+            <Row justify="center" className="domainsearch">
                <Col span={13} className="domain">
-                  {/* Heading */}
                   <div>
                      <h2>Use Domain Finder to find unique domains!</h2>
                      <p>
@@ -20,7 +19,6 @@ function Domain() {
                      </p>
                   </div>
 
-                  {/* Searching */}
                   <div>
                      <SearchingBox />
 
@@ -39,7 +37,6 @@ function Domain() {
                      </div>
                   </div>
 
-                  {/* Top Searches */}
                   <div>
                      <b>Top searches:</b>
                      <Tags />

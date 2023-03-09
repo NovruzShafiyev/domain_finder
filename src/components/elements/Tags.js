@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../assets/scss/style.scss';
 
-function Tags() {
+const Tags = () => {
    return (
       <div className="tags">
          <ul>
