@@ -36,7 +36,7 @@ const ResultItem = () => {
                   </div>
                 </div>
               </div>
-              <Divider />={" "}
+              <Divider />{" "}
               <div className="domain_description">
                 <div>
                   <h2>Adobe: Creative, marketing and document management...</h2>

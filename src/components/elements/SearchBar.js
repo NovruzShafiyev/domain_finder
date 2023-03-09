@@ -52,7 +52,7 @@ const SearchingBox = () => {
         />
         <div>
 
-          <a href={"/search"} className="search_btn">
+          <a href={"/"} className="search_btn">
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
         </div>

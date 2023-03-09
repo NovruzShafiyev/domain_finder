@@ -6,22 +6,22 @@ const Tags = () => {
       <div className="tags">
          <ul>
             <li>
-               <a href={'https://google.com'}>development</a>
+               <a href={'#'}>development</a>
             </li>
             <li>
-               <a href={'https://google.com'}>agile</a>
+               <a href={'#'}>agile</a>
             </li>
             <li>
-               <a href={'https://google.com'}>design</a>
+               <a href={'#'}>design</a>
             </li>
             <li>
-               <a href={'https://google.com'}>finance</a>
+               <a href={'#'}>finance</a>
             </li>
             <li>
-               <a href={'https://google.com'}>startup</a>
+               <a href={'#'}>startup</a>
             </li>
             <li>
-               <a href={'https://google.com'}>delivery</a>
+               <a href={'#'}>delivery</a>
             </li>
          </ul>
       </div>
