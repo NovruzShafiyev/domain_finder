@@ -105,8 +105,7 @@ const DomainFinder = () => {
                   </div>
                   <Divider />
                 </div>
-              </Col>
-              {" "}
+              </Col>{" "}
               <Col span={17} offset={1}>
                 <div className="showing">
                   <div>
