@@ -13,7 +13,7 @@ const Header = () => {
                </Col>
 
                <Col span={12} className="header-signin">
-                  <Link to="#">About us</Link>
+                  <Link to="/content">About us</Link>
                   <Link to="#">For Developers</Link>
                </Col>
             </Row>
